@@ -1,0 +1,11 @@
+npm install
+
+pode predir para instalar o jest
+
+> projeto@0.0.0 test
+> npx jest
+
+Need to install the following packages:
+jest@30.2.0
+Ok to proceed? (y) 
+confie com: y

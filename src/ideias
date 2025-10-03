@@ -1,0 +1,58 @@
+Funcionalidades Essenciais
+
+O sistema permitirá ao usuário:
+
+Criar uma nova tarefa (com título e descrição opcional).
+
+Visualizar todas as tarefas.
+
+Marcar uma tarefa como concluída.
+
+Editar o título/descrição de uma tarefa.
+
+Excluir uma tarefa.
+
+As 5 interfaces (páginas/telas) podem ser as seguintes, cobrindo o fluxo de navegação do usuário:
+
+1- Home / Dashboard (Interface Principal):
+
+Exibe uma visão geral (ex: contagem de tarefas pendentes e concluídas).
+
+Botões de navegação para "Ver Todas as Tarefas" e "Adicionar Nova Tarefa".
+
+Objetivo de teste: Teste de aceitação para garantir que a contagem.
+
+2- Lista de Tarefas (Interface de Visualização):
+
+Exibe todas as tarefas em uma lista (pendentes e concluídas).
+
+Possui botões/checkboxes para marcar como concluída/pendente.
+
+Botões para Editar e Excluir em cada item.
+
+Objetivo de teste: Teste de integração para garantir que a marcação de 'concluído' atualiza o estado no backend (ou no estado global da aplicação) e na tela.
+
+3- Adicionar Nova Tarefa (Interface de Criação):
+
+Formulário simples com campos para Título (obrigatório) e Descrição (opcional).
+
+Botão "Salvar".
+
+Objetivo de teste: Teste unitário para a função que valida o formulário (ex: título não pode ser vazio).
+
+4- Editar Tarefa (Interface de Edição):
+
+Formulário pré-preenchido com os dados da tarefa selecionada.
+
+Botão "Atualizar".
+
+Objetivo de teste: Teste de aceitação para garantir que ao clicar em "Atualizar", a tarefa na lista principal é modificada com os novos dados.
+
+5- Página de Tarefas Concluídas (Interface de Filtro/Relatório):
+
+Exibe apenas as tarefas que estão marcadas como concluídas.
+
+Pode ter um botão para "Limpar Tarefas Concluídas" (opcional, para um teste de integração mais interessante).
+
+Objetivo de teste: Teste unitário para a função que filtra as tarefas concluídas de uma lista completa.
+
