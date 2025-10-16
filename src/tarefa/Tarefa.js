@@ -1,29 +1,25 @@
 class Tarefa{
-    constructor(titulo,descricao,status,esforco ){
+    constructor(id,titulo,descricao,status,esforco,idUsuario ){
         if (!titulo || typeof titulo !== "string") {
             throw new Error("Titulo inválido");
         }
         if (!descricao || typeof descricao !== "string") {
             throw new Error("Descrição inválido");
         }
-        if (!status || typeof status !== "string") {
+        if (typeof status !== "boolean") {
             throw new Error("Status inválido");
         }
         if (!Number.isInteger(esforco)|| esforco<1||esforco>5) {
             throw new Error("Esforço inválido");
         }
+        this.id=id;
         this.titulo=titulo;
         this.descricao=descricao
         this.status=status
         this.esforco=esforco
+        this.idUsuario=idUsuario;
     }
 
-    setStatus(status){
-        if (!status || typeof status !== "string") {
-            throw new Error("Status inválido");
-        }
-        this.status=status
-    }
     setTitulo(titulo){
          if (!titulo || typeof titulo !== "string") {
             throw new Error("Titulo inválido");

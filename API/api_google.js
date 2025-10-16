@@ -17,4 +17,4 @@ async function login(email, senha) {
   return "Senha e/ou usuário inválido";
 }
 
-module.exports = login;
+module.exports = { login };

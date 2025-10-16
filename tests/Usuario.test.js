@@ -11,10 +11,10 @@ describe("Usuario", () => {
   describe("Adição de tarefas", () => {
     it("deve incrementar uma tarefa válida", () => {
       const usuario = new Usuario("Joao@gmail.com", "joao123", mockDb);
-      const tarefa = new Tarefa("Comprar pão", "Ir na padaria comprar 10 pães", "em andamento", 2);
+      const tarefa = new Tarefa(1,"Comprar pão", "Ir na padaria comprar 10 pães", false, 2,1);
 
       usuario.addTarefa(tarefa);
-      expect(usuario.tarefas.length).toBe(1);  // Corrigi 'lenght' -> 'length'
+      expect(usuario.tarefas.length).toBe(1); 
     });
 
     it("deve lançar erro ao adicionar uma tarefa inválida", () => {
@@ -28,7 +28,7 @@ describe("Usuario", () => {
   describe("Remoção de tarefas", () => {
     it("deve remover uma tarefa com sucesso", () => {
       const usuario = new Usuario("Joao@gmail.com", "joao123", mockDb);
-      const tarefa = new Tarefa("Comprar pão", "Ir na padaria comprar 10 pães", "em andamento", 2);
+      const tarefa = new Tarefa(2,"Comprar pão", "Ir na padaria comprar 10 pães", true, 2,1);
 
       usuario.addTarefa(tarefa);
       const msg = usuario.removeTarefa(tarefa);
@@ -39,7 +39,7 @@ describe("Usuario", () => {
 
     it("deve lançar erro ao tentar remover uma tarefa que não existe", () => {
       const usuario = new Usuario("Joao@gmail.com", "joao123", mockDb);
-      const tarefa = new Tarefa("Comprar pão", "Ir na padaria comprar 10 pães", "em andamento", 2);
+      const tarefa = new Tarefa(3,"Comprar pão", "Ir na padaria comprar 10 pães", true, 2,1);
 
       expect(() => usuario.removeTarefa(tarefa)).toThrow("Tarefa invalida");
     });

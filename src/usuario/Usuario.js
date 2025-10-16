@@ -53,6 +53,9 @@ class Usuario{
         if (!senha || typeof senha !== "string") throw new Error("senha inválido");
 
         const idTmp = await this.db.login(email, senha);
+        console.log("email:",email, "senha",senha)
+            console.log("Retorno do DB:", idTmp);
+
         if (!Number.isInteger(idTmp)) throw new Error("Usuario inválido");
 
         this.id = idTmp;
